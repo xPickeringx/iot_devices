@@ -1,0 +1,169 @@
+/* =========================================
+   1. CONFIGURACIÓN GENERAL Y FUENTES
+   ========================================= */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background: #f0f2f5; /* Gris muy suave, típico de dashboards */
+    color: #344767;      /* Color de texto gris oscuro (menos duro que el negro) */
+    overflow-x: hidden;
+}
+
+/* =========================================
+   2. NAVBAR CON GRADIENTE
+   ========================================= */
+.navbar {
+    /* Gradiente azul-violeta moderno */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2) !important;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* =========================================
+   3. TARJETAS (EFECTO GLASS / FLOTANTE)
+   ========================================= */
+.card {
+    border: none;
+    border-radius: 20px; /* Bordes muy redondeados */
+    background: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+    transform: translateY(-8px); /* Se eleva */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    padding: 1.2rem 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Iconos grandes de dispositivos */
+.device-icon {
+    font-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin-right: 15px;
+    background: rgba(240, 242, 245, 0.5); /* Fondo gris suave detrás del icono */
+    transition: all 0.3s;
+}
+
+/* Colores de estado más vibrantes */
+.text-success { color: #2dce89 !important; } /* Verde esmeralda */
+.text-danger { color: #f5365c !important; }  /* Rojo coral */
+.text-warning { color: #fb6340 !important; } /* Naranja */
+.text-secondary { color: #8898aa !important; }
+
+/* =========================================
+   4. INTERRUPTORES (TOGGLES) Y BOTONES
+   ========================================= */
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    cursor: pointer;
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #2dce89; /* Verde al encender */
+    border-color: #2dce89;
+}
+
+.btn {
+    border-radius: 50px; /* Botones tipo píldora */
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.4);
+    transform: scale(1.02);
+}
+
+/* =========================================
+   5. TABLAS DE MONITOREO
+   ========================================= */
+.table thead th {
+    border-bottom: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8898aa;
+    letter-spacing: 0.5px;
+    background-color: #f6f9fc;
+}
+
+.table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* =========================================
+   6. FOOTER Y ANIMACIONES
+   ========================================= */
+footer {
+    background: #111827 !important; /* Negro casi puro */
+    font-size: 0.9rem;
+}
+
+.hover-link:hover i {
+    color: #2dce89; /* Verde al pasar el mouse por redes sociales */
+    transform: scale(1.2);
+    display: inline-block;
+}
+
+/* Animación de pulso para el estado ONLINE */
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(45, 206, 137, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(45, 206, 137, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(45, 206, 137, 0); }
+}
+
+.animate-pulse {
+    animation: pulse-green 2s infinite;
+    color: #2dce89 !important;
+}
+
+/* Spinner de carga */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25em;
+}
